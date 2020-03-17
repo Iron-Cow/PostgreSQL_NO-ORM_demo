@@ -1,0 +1,30 @@
+<h1>Change Human</h1>
+
+
+<form id="form_add_human" method="post" action="/update/{{ human.id }}">
+            {% csrf_token %}
+             <p>
+                Name:<br>
+                <input type="text" id ="human_name" name="human_name" value="{{ human.name }}" required/>
+            </p>
+            <p>
+                Age:<br>
+                <input type="number" id ="human_age" name="human_age" value="{{ human.age }}" required/>
+            </p>
+
+            <p>
+                <select id="gender_dropdown" name="human_gender">
+                {% for gender in genders %}
+                <option id="gender_option" {% if gender.name == human.gender_name %} selected {% endif %} >{{ gender.name }}</option>
+                {% endfor %}
+
+            </select>
+            </p>
+            <p>
+                <input id="submit" type="submit" value="Send" class=b1 />
+                <input type="reset" value="Clear" class=b1 />
+            </p>
+
+        </form>
+
+<hr>
