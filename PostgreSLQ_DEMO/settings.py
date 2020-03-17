@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "ojovakcl",
         'USER': "ojovakcl",
-        'PASSWORD': "kzBiIt8jH6-gmbydwHU1RYU0JIDzQBYz",
+        'PASSWORD': "kzBiIt8jH6-gmbydwHU1RYU0JIDzQBYz", # https://api.elephantsql.com/console/...
         'HOST': "hansken.db.elephantsql.com",
         'PORT': "5432",
     }

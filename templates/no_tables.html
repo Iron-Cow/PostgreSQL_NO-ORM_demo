@@ -1,0 +1,12 @@
+
+{% if not missing_tables %}
+<h1>All tables created fine</h1>
+{% else %}
+<h1>Create tables human and genger first, please</h1>
+    {% for table in missing_tables %}
+
+        <h4><a href="/create_{{ table }}">
+            Create table <span style="color: red">{{ table }}</span>
+        </a></h4>
+    {% endfor %}
+{% endif %}
